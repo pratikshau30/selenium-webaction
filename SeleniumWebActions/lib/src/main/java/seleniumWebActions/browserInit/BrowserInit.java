@@ -15,9 +15,7 @@ public class BrowserInit {
 	 */
 	public void startBrowser() throws MalformedURLException {
 		// TODO : Initialise and start a Chrome window using RemoteWebDriver class
-		final DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setBrowserName(BrowserType.CHROME);
-		WebDriver driver = new RemoteWebDriver(new URL("http://localhost:8082/wd/hub"), capabilities);
+	
 	}
 
 	public static void main(String[] args) throws MalformedURLException {

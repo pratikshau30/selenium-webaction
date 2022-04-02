@@ -5,6 +5,7 @@ import java.net.MalformedURLException;
 import seleniumWebActions.browserInit.BrowserInit;
 import seleniumWebActions.exceptions.BrowserException;
 import seleniumWebActions.exceptions.WebDriverException;
+import seleniumWebActions.exceptions.WebElementException;
 import seleniumWebActions.locatorMethods.CountNoOfProducts;
 import seleniumWebActions.locatorMethods.FindLocators;
 import seleniumWebActions.locatorMethods.FindLocatorsUsingFindElementBy;
@@ -18,8 +19,8 @@ public class App {
         System.out.println("From App.java");
 
         // TODO1 - Uncomment for Milestone 3 Activity - Add the RemoteWebDriver config
-        // BrowserInit browserInit = new BrowserInit();
-        // browserInit.main(null);
+        BrowserInit browserInit = new BrowserInit();
+        browserInit.main(null);
 
         // TODO2 - Uncomment for Milestone 4 Activity - Automate BrowserActions
         // BrowserActions browserActions = new BrowserActions();
@@ -50,8 +51,8 @@ public class App {
         // webElementAction.main(null);
 
         // TODO9 - Uncomment for Milestone 9 Activity - WebDriverException
-        WebDriverException webDriverException = new WebDriverException();
-        webDriverException.main(null);
+        // WebDriverException webDriverException = new WebDriverException();
+        // webDriverException.main(null);
 
         // TODO10 - Uncomment for Milestone 9 Activity - WebElementException
         // WebElementException webElementException = new WebElementException();
