@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "SeleniumWebActions.App",
+            "projectName": "SeleniumWebActions-lib"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}",
@@ -15,8 +22,8 @@
             "type": "java",
             "name": "Debug (Launch)-App<lib>",
             "request": "launch",
-            "mainClass": "SeleniumWebActions.App",
-            "projectName": "lib",
+            "mainClass": "seleniumWebActions.App",
+            "projectName": "SeleniumWebActions-lib",
             "preLaunchTask": "selenium-start"
         }
     ]

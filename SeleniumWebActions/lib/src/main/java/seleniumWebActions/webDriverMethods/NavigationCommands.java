@@ -1,26 +1,23 @@
-package milestone2;
+package seleniumWebActions.webDriverMethods;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class NavigationCommands {
 	WebDriver driver = null;
 
 	/**
 	 * use this method to initialize the browser.
-	 * 
-	 * @param browserName
 	 */
-	public void startBrowser() {
-
-		// Telling the system where to find the GeckoDriver.exe
-		System.out.println("Setting ChromeDriver.exe:");
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Drivers\\chromedriver.exe");
-
-		// Creating the object of FirefoxDriver
-		System.out.println("Creating the object of ChromeDriver : ");
-		driver = new ChromeDriver();
+	public void startBrowser() throws MalformedURLException {
+		final DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setBrowserName(BrowserType.CHROME);
+		driver = new RemoteWebDriver(new URL("http://localhost:8082/wd/hub"), capabilities);
 	}
 
 	/**
@@ -41,7 +38,9 @@ public class NavigationCommands {
 	 */
 	public void navigateToUrl(String url) {
 		// TODO - open the url in browser using to()
+
 		// TODO - print the cureent url
+
 	}
 	
 	/**
@@ -49,9 +48,10 @@ public class NavigationCommands {
 	 * button on browser
 	 */
 	public void backToPreviousUrl() {
-		
 		//TODO - go back to previous url
-		//TODO - print the current url.
+
+		//TODO - print the current url
+
 	}
 	
 	/**
@@ -60,7 +60,9 @@ public class NavigationCommands {
 	 */
 	public void goToNextUrl() {
 		// TODO - go to next/forward url
-		// TODO - print the current url.
+
+		// TODO - print the current url
+
 	}
 	
 	/**
@@ -69,6 +71,7 @@ public class NavigationCommands {
 	 */
 	public void refreshPage() {
 		//TODO - refresh the web page
+
 	}
 	
 	/**
@@ -78,20 +81,20 @@ public class NavigationCommands {
 		driver.close();
 	}
 	
-	public static void main(String[] args) {
-		// TODO : Create the object of NavigationCommands class
-
-		// TODO : Call the method startBrowser
+	public static void main(String[] args) throws MalformedURLException {
+		// TODO: Create the object of NavigationCommands class
 		
-		// TODO : Call the method openURL
+		// TODO: Call the method startBrowser
 		
-		// TODO : Call the method navigateToUrl 
+		// TODO: Call the method openURL
 		
-		// TODO : call the method backToPreviousUrl 
+		// TODO: Call the method navigateToUrl 
 		
-		// TODO : Call the method goToNextUrl 
+		// TODO: Call the method backToPreviousUrl 
 		
-		// TODO : Call the methods closeBrowser
+		// TODO: Call the method goToNextUrl 
+		
+		// TODO: Call the methods closeBrowser
 
 	}
 }

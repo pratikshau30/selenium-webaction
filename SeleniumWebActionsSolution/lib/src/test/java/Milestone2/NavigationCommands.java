@@ -1,39 +1,35 @@
-package Milestone2;
+package seleniumWebActions.webDriverMethods;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class NavigationCommands {
-	
 	WebDriver driver = null;
 
 	/**
 	 * use this method to initialize the browser.
-	 * 
-	 * @param browserName
 	 */
-	public void startBrowser() {
-
-		// Telling the system where to find the GeckoDriver.exe
-		System.out.println("Setting ChromeDriver.exe:");
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Drivers\\chromedriver.exe");
-
-		// Creating the object of FirefoxDriver
-		System.out.println("Creating the object of ChromeDriver : ");
-		driver = new ChromeDriver();
+	public void startBrowser() throws MalformedURLException {
+		final DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setBrowserName(BrowserType.CHROME);
+		driver = new RemoteWebDriver(new URL("http://localhost:8082/wd/hub"), capabilities);
 	}
 
 	/**
 	 * use this method to open the url of an application
 	 */
 	public void openURL(String browserURL) {
-		
-		System.out.println("Maximizing window...");
-		driver.manage().window().maximize();
-		
+
 		System.out.println("Opening website --->" + browserURL);
 		driver.get(browserURL);
 
+		System.out.println("Maximizing window...");
+		driver.manage().window().maximize();
 	}
 	
 	/**
@@ -41,8 +37,11 @@ public class NavigationCommands {
 	 * @param url
 	 */
 	public void navigateToUrl(String url) {
+		// TODO - open the url in browser using to()
 		System.out.println("Open Url : "+url);
 		driver.navigate().to(url);
+
+		// TODO - print the cureent url
 		String currentUrl = driver.getCurrentUrl();
 		System.out.println("Current url : "+currentUrl);
 	}
@@ -52,7 +51,11 @@ public class NavigationCommands {
 	 * button on browser
 	 */
 	public void backToPreviousUrl() {
+		//TODO - go back to previous url
+		System.out.println("Going back to previous url");
 		driver.navigate().back();
+
+		//TODO - print the current url
 		String currentUrl = driver.getCurrentUrl();
 		System.out.println("Current url : "+currentUrl);
 	}
@@ -62,7 +65,11 @@ public class NavigationCommands {
 	 * button on browser
 	 */
 	public void goToNextUrl() {
+		// TODO - go to next/forward url
+		System.out.println("Going forward to next url");
 		driver.navigate().forward();
+
+		// TODO - print the current url
 		String currentUrl = driver.getCurrentUrl();
 		System.out.println("Current url : "+currentUrl);
 	}
@@ -72,6 +79,7 @@ public class NavigationCommands {
 	 * on browser
 	 */
 	public void refreshPage() {
+		//TODO - refresh the web page
 		driver.navigate().refresh();
 	}
 	
@@ -82,26 +90,27 @@ public class NavigationCommands {
 		driver.close();
 	}
 	
-	public static void main(String[] args) {
-		// Create the object of NavigationCommands class
+	public static void main(String[] args) throws MalformedURLException {
+		// TODO: Create the object of NavigationCommands class
 		NavigationCommands navigationCommands = new NavigationCommands();
 		
-		// Call the method startBrowser
+		// TODO: Call the method startBrowser
 		navigationCommands.startBrowser();
 		
-		//Call the method openURL
+		// TODO: Call the method openURL
 		navigationCommands.openURL("https://crio-qkart-frontend-qa.vercel.app/");
 		
-		//Call the method navigateToUrl 
+		// TODO: Call the method navigateToUrl 
 		navigationCommands.navigateToUrl("https://crio-qkart-frontend-qa.vercel.app/login");
 		
-		//call the method backToPreviousUrl 
+		// TODO: Call the method backToPreviousUrl 
 		navigationCommands.backToPreviousUrl();
 		
-		// Call the method goToNextUrl 
+		// TODO: Call the method goToNextUrl 
 		navigationCommands.goToNextUrl();
 		
-		// Call the methods closeBrowser
+		// TODO: Call the methods closeBrowser
 		navigationCommands.closeBrowser();
+
 	}
 }

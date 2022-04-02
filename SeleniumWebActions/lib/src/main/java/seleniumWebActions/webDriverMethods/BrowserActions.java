@@ -28,12 +28,10 @@ public class BrowserActions {
 	 */
 	public void openURL(String browserURL) {
 		// TODO: Maximize the browser window
-		System.out.println("Maximizing window...");
-		driver.manage().window().maximize();
+
 
 		// TODO: Open Web site denoted by "browserUrl"
-		System.out.println("Opening website --->" + browserURL);
-		driver.get(browserURL);
+
 	}
 
 	/**
@@ -43,7 +41,6 @@ public class BrowserActions {
 		String currentUrl = null;
 
 		// TODO : get the current page url
-		currentUrl = driver.getCurrentUrl();
 
 		return currentUrl;
 	}
@@ -57,7 +54,6 @@ public class BrowserActions {
 		String title = null;
 
 		// TODO: get the title of web site
-		title = driver.getTitle();
 
 		return title;
 	}
@@ -71,14 +67,9 @@ public class BrowserActions {
 		String pageSource = null;
 
 		// TODO : get the page source of current web page
-		pageSource = driver.getPageSource();
 
 		// TODO : Check "You need to enable JavaScript to run this app." present in page
 		// source and print status
-		String stringToMatch = "You need to enable JavaScript to run this app.";
-		boolean isPresent = pageSource.contains(stringToMatch);
-
-		System.out.println("Text is present in page source : "+ isPresent);
 	}
 
 	/**
@@ -86,33 +77,23 @@ public class BrowserActions {
 	 */
 	public void closeBrowser() {
 		// TODO: Close the browser window
-		System.out.println("Closing the browser window");
-		driver.close();
+
 	}
 
 	public static void main(String[] args) throws MalformedURLException {
 		// TODO : Create the object of BrowserActions class
-		BrowserActions browserActions = new BrowserActions();
 
 		// TODO : Call the method startBrowser
-		browserActions.startBrowser();
 
 		// TODO : Call the method openURL to open https://crio-qkart-frontend-qa.vercel.app/
-		browserActions.openURL("https://crio-qkart-frontend-qa.vercel.app/");
 
 		// TODO : Call the method getCurrentUrl and print the current url
-		String currentPageUrl = browserActions.getCurrentUrl();
-		System.out.println("Current url : " + currentPageUrl);
 
 		// TODO : call the method getPageSource
-		browserActions.getPageSource();
 
 		// TODO : Call the method getPageTitle and print the title
-		String title = browserActions.getPageTitle();
-		System.out.println("Title of the page is : " + title);
 
 		// TODO : Call the methods closeBrowser
-		browserActions.closeBrowser();
 
 	}
 }

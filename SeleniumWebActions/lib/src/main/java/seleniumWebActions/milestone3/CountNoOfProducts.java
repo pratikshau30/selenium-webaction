@@ -1,11 +1,12 @@
-package milestone3;
+package seleniumWebActions.milestone3;
 
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ProductCountUsingFindElementsBy {
+
+public class CountNoOfProducts {
 	
-	RemoteWebDriver driver = null;
+	WebDriver driver = null;
 
 	/**
 	 * use this method to initialize the browser.
@@ -14,11 +15,13 @@ public class ProductCountUsingFindElementsBy {
 	 */
 	public void startBrowser() {
 
-		System.out.println("Setting GeckoDriver.exe:");
-		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\Drivers\\geckodriver.exe");
+		// Telling the system where to find the GeckoDriver.exe
+		System.out.println("Setting ChromeDriver.exe:");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Drivers\\chromedriver.exe");
 
-		System.out.println("Creating the object of FirefoxDriver:");
-		driver = new FirefoxDriver();
+		// Creating the object of FirefoxDriver
+		System.out.println("Creating the object of ChromeDriver : ");
+		driver = new ChromeDriver();
 	}
 
 	/**
@@ -34,14 +37,12 @@ public class ProductCountUsingFindElementsBy {
 	}
 	
 	/**
-	 * use this method to locate all the products on page
-	 * and print the total number of products available.
-	 * 
+	 * use this method to locate all the products 
+	 * on page and print the total number of product listed.
 	 */
-	
-	public void totalProducts() {
+	public void totalCountOfProducts() {
 		int count = 0;
-		//TODO: Locate all the products available on web page.
+		//TODO: Locate all the links available on web page.
 		//TODO: Print the count.
 	}
 	
@@ -60,7 +61,7 @@ public class ProductCountUsingFindElementsBy {
 		
 		// TODO : Call the method openURL
 		
-		// TODO : Call the method totalProducts  
+		// TODO : Call the method LinkCount  
 		
 		// TODO : Call the method closeBrowser
 

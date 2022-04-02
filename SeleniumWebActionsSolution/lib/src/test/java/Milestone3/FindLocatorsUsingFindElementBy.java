@@ -51,6 +51,8 @@ public class FindLocatorsUsingFindElementBy {
 		System.out.println("Locating login button on page...");
 		WebElement btnLogin = driver.findElementByXPath("//button[contains(text(),'Login')]");
 		System.out.println("Login button locator value : "+btnLogin.toString());
+
+		driver.findElementsById("");
 	}
 
 	/**

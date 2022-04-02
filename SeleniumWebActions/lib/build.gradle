@@ -5,18 +5,38 @@
  * For more details take a look at the 'Building Java & JVM projects' chapter in the Gradle
  * User Manual available at https://docs.gradle.org/6.8/userguide/building_java_projects.html
  */
-
 plugins {
-    // Apply the java-library plugin for API and implementation separation.
-    id 'java-library'
+    id 'java'
 }
 
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+apply plugin: 'application'
+
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
 repositories {
-    // Use JCenter for resolving dependencies.
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-	implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '4.4.3'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0-alpha-1'
 }
+
+// Additional config for Crio workspace
+
+task startScript(type:Exec) {
+    commandLine '../selenium-run.sh'
+}
+
+run.dependsOn startScript
+
+test.dependsOn startScript
+
+mainClassName = 'seleniumWebActions.App'

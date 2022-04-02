@@ -1,10 +1,10 @@
-package milestone3;
+package seleniumWebActions.milestone3;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
-
-public class CountNoOfProducts {
+public class FindLocators {
 	
 	WebDriver driver = null;
 
@@ -32,20 +32,25 @@ public class CountNoOfProducts {
 		System.out.println("opening website --->" + browserURL);
 		driver.get(browserURL);
 
-		System.out.println("");
+		System.out.println("Maximizing window...");
 		driver.manage().window().maximize();
 	}
 	
 	/**
-	 * use this method to locate all the products 
-	 * on page and print the total number of product listed.
+	 * use this method to locate login button
+	 * and print the locator.
 	 */
-	public void totalCountOfProducts() {
-		int count = 0;
-		//TODO: Locate all the links available on web page.
-		//TODO: Print the count.
+	public void locateWebElements() {
+		//TODO : Locate the username text box on page
+		//TODO : Print the locator
+		
+		//TODO : Locate the password text box on page
+		//TODO : Print the locator
+		
+		//TODO : Locate the login button on page
+		//TODO : Print the locator
 	}
-	
+
 	/**
 	 * use this method to close the current window of browser 
 	 */
@@ -54,16 +59,14 @@ public class CountNoOfProducts {
 	}
 	
 	public static void main(String[] args) {
-		
-		// TODO : Create the object of LinkCount class
+		// TODO : Create the object of FindLocators class
 
 		// TODO : Call the method startBrowser
 		
 		// TODO : Call the method openURL
 		
-		// TODO : Call the method LinkCount  
+		// TODO : Call the method locateLoginBtn  
 		
 		// TODO : Call the method closeBrowser
-
 	}
 }

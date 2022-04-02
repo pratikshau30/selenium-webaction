@@ -1,4 +1,4 @@
-package milestone3;
+package seleniumWebActions.milestone3;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
