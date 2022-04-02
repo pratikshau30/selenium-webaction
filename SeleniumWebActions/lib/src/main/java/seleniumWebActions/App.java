@@ -1,7 +1,15 @@
 package seleniumWebActions;
 
 import java.net.MalformedURLException;
+
 import seleniumWebActions.browserInit.BrowserInit;
+import seleniumWebActions.exceptions.BrowserException;
+import seleniumWebActions.exceptions.WebDriverException;
+import seleniumWebActions.locatorMethods.CountNoOfProducts;
+import seleniumWebActions.locatorMethods.FindLocators;
+import seleniumWebActions.locatorMethods.FindLocatorsUsingFindElementBy;
+import seleniumWebActions.locatorMethods.ProductCountUsingFindElementsBy;
+import seleniumWebActions.webActions.WebElementAction;
 import seleniumWebActions.webDriverMethods.BrowserActions;
 import seleniumWebActions.webDriverMethods.NavigationCommands;
 
@@ -17,8 +25,36 @@ public class App {
         // BrowserActions browserActions = new BrowserActions();
         // browserActions.main(null);
 
-        // TODO2 - Uncomment for Milestone 6 Activity - Automate NavigationCommands
+        // TODO3 - Uncomment for Milestone 6 Activity - Automate NavigationCommands
         // NavigationCommands navigationCommands = new NavigationCommands();
         // navigationCommands.main(null);
+
+        // TODO4 - Uncomment for Milestone 7 Activity - findElement (FindLocators.java)
+        // FindLocators findLocators = new FindLocators();
+        // findLocators.main(null);
+
+        // TODO5 - Uncomment for Milestone 7 Activity - findElements (CountNoOfProducts.java)
+        // CountNoOfProducts countNoOfProducts = new CountNoOfProducts();
+        // countNoOfProducts.main(null);
+
+        // TODO6 - Uncomment for Milestone 7 Activity - findElementByXX (FindLocatorsUsingFindElementBy.java)
+        // FindLocatorsUsingFindElementBy findLocatorsUsingFindElementBy = new FindLocatorsUsingFindElementBy();
+        // findLocatorsUsingFindElementBy.main(null);
+
+        // TODO7 - Uncomment for Milestone 7 Activity - findElementsByXX (ProductCountUsingFindElementsBy.java)
+        // ProductCountUsingFindElementsBy productCountUsingFindElementsBy = new ProductCountUsingFindElementsBy();
+        // productCountUsingFindElementsBy.main(null);
+        
+        // TODO8 - Uncomment for Milestone 8 Activity - Web Elements Action
+        // WebElementAction webElementAction = new WebElementAction();
+        // webElementAction.main(null);
+
+        // TODO9 - Uncomment for Milestone 9 Activity - WebDriverException
+        WebDriverException webDriverException = new WebDriverException();
+        webDriverException.main(null);
+
+        // TODO10 - Uncomment for Milestone 9 Activity - WebElementException
+        // WebElementException webElementException = new WebElementException();
+        // webElementException.main(null);
     }
 }

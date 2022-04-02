@@ -86,13 +86,17 @@ public class NavigationCommands {
 		
 		// TODO: Call the method startBrowser
 		
-		// TODO: Call the method openURL
-		
-		// TODO: Call the method navigateToUrl 
+		// TODO: Call the method openURL to open
+		// https://crio-qkart-frontend-qa.vercel.app/
+
+		// TODO: Call the method navigateToUrl to navigate to
+		// https://crio-qkart-frontend-qa.vercel.app/login
 		
 		// TODO: Call the method backToPreviousUrl 
 		
 		// TODO: Call the method goToNextUrl 
+
+		// TODO: Call the method refreshPage
 		
 		// TODO: Call the methods closeBrowser
 

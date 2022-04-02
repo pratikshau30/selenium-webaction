@@ -1,4 +1,4 @@
-package milestone5;
+package seleniumWebActions.exceptions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

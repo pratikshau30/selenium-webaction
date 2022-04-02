@@ -31,38 +31,37 @@ public class NavigationCommands {
 		System.out.println("Maximizing window...");
 		driver.manage().window().maximize();
 	}
-	
+
 	/**
 	 * use this method to open new url
+	 * 
 	 * @param url
 	 */
 	public void navigateToUrl(String url) {
 		// TODO - open the url in browser using to()
-		System.out.println("Open Url : "+url);
+		System.out.println("Open Url : " + url);
 		driver.navigate().to(url);
 
 		// TODO - print the cureent url
 		String currentUrl = driver.getCurrentUrl();
-		System.out.println("Current url : "+currentUrl);
+		System.out.println("Current url : " + currentUrl);
 	}
-	
+
 	/**
-	 * use this method to click on back 
-	 * button on browser
+	 * use this method to click on back button on browser
 	 */
 	public void backToPreviousUrl() {
-		//TODO - go back to previous url
+		// TODO - go back to previous url
 		System.out.println("Going back to previous url");
 		driver.navigate().back();
 
-		//TODO - print the current url
+		// TODO - print the current url
 		String currentUrl = driver.getCurrentUrl();
-		System.out.println("Current url : "+currentUrl);
+		System.out.println("Current url : " + currentUrl);
 	}
-	
+
 	/**
-	 * use this method to click on forward 
-	 * button on browser
+	 * use this method to click on forward button on browser
 	 */
 	public void goToNextUrl() {
 		// TODO - go to next/forward url
@@ -71,44 +70,48 @@ public class NavigationCommands {
 
 		// TODO - print the current url
 		String currentUrl = driver.getCurrentUrl();
-		System.out.println("Current url : "+currentUrl);
+		System.out.println("Current url : " + currentUrl);
 	}
-	
+
 	/**
-	 * use this method to click on refresh button
-	 * on browser
+	 * use this method to click on refresh button on browser
 	 */
 	public void refreshPage() {
-		//TODO - refresh the web page
+		// TODO - refresh the web page
 		driver.navigate().refresh();
 	}
-	
+
 	/**
-	 * use this method to close the current window of browser 
+	 * use this method to close the current window of browser
 	 */
 	public void closeBrowser() {
 		driver.close();
 	}
-	
+
 	public static void main(String[] args) throws MalformedURLException {
 		// TODO: Create the object of NavigationCommands class
 		NavigationCommands navigationCommands = new NavigationCommands();
-		
+
 		// TODO: Call the method startBrowser
 		navigationCommands.startBrowser();
-		
-		// TODO: Call the method openURL
+
+		// TODO: Call the method openURL to open
+		// https://crio-qkart-frontend-qa.vercel.app/
 		navigationCommands.openURL("https://crio-qkart-frontend-qa.vercel.app/");
-		
-		// TODO: Call the method navigateToUrl 
+
+		// TODO: Call the method navigateToUrl to navigate to
+		// https://crio-qkart-frontend-qa.vercel.app/login
 		navigationCommands.navigateToUrl("https://crio-qkart-frontend-qa.vercel.app/login");
-		
-		// TODO: Call the method backToPreviousUrl 
+
+		// TODO: Call the method backToPreviousUrl
 		navigationCommands.backToPreviousUrl();
-		
-		// TODO: Call the method goToNextUrl 
+
+		// TODO: Call the method goToNextUrl
 		navigationCommands.goToNextUrl();
-		
+
+		// TODO: Call the method refreshPage
+		navigationCommands.refreshPage();
+
 		// TODO: Call the methods closeBrowser
 		navigationCommands.closeBrowser();
 

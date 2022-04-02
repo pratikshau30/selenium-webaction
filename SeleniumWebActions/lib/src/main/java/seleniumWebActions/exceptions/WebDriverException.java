@@ -1,28 +1,27 @@
-package milestone5;
+package seleniumWebActions.exceptions;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class WebDriverException {
-
 	WebDriver driver = null;
 
 	/**
 	 * use this method to initialize the browser.
-	 * 
-	 * @param browserName
 	 */
-	public void startBrowser() {
-
-		// Telling the system where to find the GeckoDriver.exe
-		System.out.println("Setting ChromeDriver.exe:");
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Drivers\\chromedriver.exe");
-
-		// Creating the object of FirefoxDriver
-		System.out.println("Creating the object of ChromeDriver : ");
-		driver = new ChromeDriver();
+	public void startBrowser() throws MalformedURLException {
+		final DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setBrowserName(BrowserType.CHROME);
+		driver = new RemoteWebDriver(new URL("http://localhost:8082/wd/hub"), capabilities);
 	}
 
 	/**
@@ -55,7 +54,7 @@ public class WebDriverException {
 		driver.close();
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws MalformedURLException {
 		// Create the object of WebDriverException class
 		WebDriverException webDriverException = new WebDriverException();
 
