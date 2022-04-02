@@ -58,7 +58,7 @@ public class WebDriverException {
 		driver.close();
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws MalformedURLException {
 		// Create the object of WebDriverException class
 		WebDriverException webDriverException = new WebDriverException();
 
