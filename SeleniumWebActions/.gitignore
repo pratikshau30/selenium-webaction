@@ -10,3 +10,6 @@ lib/.project
 lib/.settings
 .project
 .settings
+.classpath
+
+.DS_Store
