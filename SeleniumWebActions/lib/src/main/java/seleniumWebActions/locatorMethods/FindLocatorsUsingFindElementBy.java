@@ -57,11 +57,11 @@ public class FindLocatorsUsingFindElementBy {
 	}
 
 	public static void main(String[] args) throws MalformedURLException {
-		// TODO: Create the object of FindLocators class
+		// TODO: Create the object of FindLocatorsUsingFindElementBy class
 
 		// TODO: Call the method startBrowser
 		
-		// TODO: Call the method openURL to open https://crio-qkart-frontend-qa.vercel.app/
+		// TODO: Call the method openURL to open https://crio-qkart-frontend-qa.vercel.app/login
 		
 		// TODO: Call the method locateWebElements 
 		
