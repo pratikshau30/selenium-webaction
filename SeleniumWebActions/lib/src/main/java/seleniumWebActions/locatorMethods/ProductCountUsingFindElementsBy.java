@@ -55,7 +55,7 @@ public class ProductCountUsingFindElementsBy {
 	}
 
 	public static void main(String[] args) throws MalformedURLException {
-		// TODO: Create the object of LinkCount class
+		// TODO: Create the object of ProductCountUsingFindElementsBy class
 
 		// TODO: Call the method startBrowser
 
