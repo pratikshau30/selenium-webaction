@@ -20,10 +20,8 @@ public class BrowserInit {
 		WebDriver driver = new RemoteWebDriver(new URL("http://localhost:8082/wd/hub"), capabilities);
 	}
 
-	public static void main(String[] args) throws MalformedURLException {
-		BrowserInit browserInit = new BrowserInit();
-
-		browserInit.startBrowser();
+	public void run throws MalformedURLException {
+		this.startBrowser();
 	}
 
 }
