@@ -93,9 +93,8 @@ public class WebElementAction {
 		driver.close();
 	}
 
-	public static void main(String[] args) throws MalformedURLException {
-		// TODO: Create the object of WebElementAction class
-
+	public void run() throws MalformedURLException {
+		
 		// TODO: Call the method startBrowser
 
 		// TODO: Call the method openURL
