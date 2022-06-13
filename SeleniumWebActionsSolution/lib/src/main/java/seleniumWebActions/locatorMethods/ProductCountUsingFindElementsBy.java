@@ -58,21 +58,20 @@ public class ProductCountUsingFindElementsBy {
 		driver.close();
 	}
 
-	public static void main(String[] args) throws MalformedURLException {
-		// TODO: Create the object of LinkCount class
-		ProductCountUsingFindElementsBy productCount = new ProductCountUsingFindElementsBy();
+	public void run() throws MalformedURLException {
+		
 
 		// TODO: Call the method startBrowser
-		productCount.startBrowser();
+		this.startBrowser();
 
 		// TODO: Call the method openURL to open https://crio-qkart-frontend-qa.vercel.app
-		productCount.openURL("https://crio-qkart-frontend-qa.vercel.app/");
+		this.openURL("https://crio-qkart-frontend-qa.vercel.app/");
 
 		// TODO: Call the method totalProducts
-		productCount.totalProducts();
+		this.totalProducts();
 
 		// TODO: Call the method closeBrowser
-		productCount.closeBrowser();
+		this.closeBrowser();
 
 	}
 }
