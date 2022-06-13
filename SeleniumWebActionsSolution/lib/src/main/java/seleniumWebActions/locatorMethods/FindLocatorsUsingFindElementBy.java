@@ -64,20 +64,19 @@ public class FindLocatorsUsingFindElementBy {
 		driver.close();
 	}
 
-	public static void main(String[] args) throws MalformedURLException {
-		// TODO: Create the object of FindLocators class
-		FindLocatorsUsingFindElementBy findLocators = new FindLocatorsUsingFindElementBy();
+	public void run() throws MalformedURLException {
+		
 
 		// TODO: Call the method startBrowser
-		findLocators.startBrowser();
+		this.startBrowser();
 		
 		// TODO: Call the method openURL
-		findLocators.openURL("https://crio-qkart-frontend-qa.vercel.app/login");
+		this.openURL("https://crio-qkart-frontend-qa.vercel.app/login");
 		
 		// TODO: Call the method locateWebElements 
-		findLocators.locateWebElements();
+		this.locateWebElements();
 		
 		// TODO: Call the method closeBrowser
-		findLocators.closeBrowser();
+		this.closeBrowser();
 	}
 }
