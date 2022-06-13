@@ -56,9 +56,8 @@ public class CountNoOfProducts {
 		driver.close();
 	}
 
-	public static void main(String[] args) throws MalformedURLException {
+	public void run() throws MalformedURLException {
 
-		// TODO: Create the object of LinkCount class
 
 		// TODO: Call the method startBrowser
 
