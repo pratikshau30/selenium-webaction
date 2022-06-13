@@ -61,23 +61,22 @@ public class CountNoOfProducts {
 		driver.close();
 	}
 
-	public static void main(String[] args) throws MalformedURLException {
+	public void run() throws MalformedURLException {
 
-		// TODO: Create the object of LinkCount class
-		CountNoOfProducts productCount = new CountNoOfProducts();
+		
 
 		// TODO: Call the method startBrowser
-		productCount.startBrowser();
+		this.startBrowser();
 
 		// TODO: Call the method openURL to open
 		// "https://crio-qkart-frontend-qa.vercel.app/"
-		productCount.openURL("https://crio-qkart-frontend-qa.vercel.app/");
+		this.openURL("https://crio-qkart-frontend-qa.vercel.app/");
 
 		// TODO: Call the method totalCountOfLinks
-		productCount.totalCountOfProducts();
+		this.totalCountOfProducts();
 
 		// TODO: Call the method closeBrowser
-		productCount.closeBrowser();
+		this.closeBrowser();
 
 	}
 }
