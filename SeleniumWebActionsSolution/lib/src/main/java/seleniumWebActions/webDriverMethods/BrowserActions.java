@@ -90,29 +90,28 @@ public class BrowserActions {
 		driver.close();
 	}
 
-	public static void main(String[] args) throws MalformedURLException {
-		// TODO : Create the object of BrowserActions class
-		BrowserActions browserActions = new BrowserActions();
+	public void run() throws MalformedURLException {
+		
 
 		// TODO : Call the method startBrowser
-		browserActions.startBrowser();
+		this.startBrowser();
 
 		// TODO : Call the method openURL to open https://crio-qkart-frontend-qa.vercel.app/
-		browserActions.openURL("https://crio-qkart-frontend-qa.vercel.app/");
+		this.openURL("https://crio-qkart-frontend-qa.vercel.app/");
 
 		// TODO : Call the method getCurrentUrl and print the current url
-		String currentPageUrl = browserActions.getCurrentUrl();
+		String currentPageUrl = this.getCurrentUrl();
 		System.out.println("Current url : " + currentPageUrl);
 
 		// TODO : call the method getPageSource
-		browserActions.getPageSource();
+		this.getPageSource();
 
 		// TODO : Call the method getPageTitle and print the title
-		String title = browserActions.getPageTitle();
+		String title = this.getPageTitle();
 		System.out.println("Title of the page is : " + title);
 
 		// TODO : Call the methods closeBrowser
-		browserActions.closeBrowser();
+		this.closeBrowser();
 
 	}
 }
