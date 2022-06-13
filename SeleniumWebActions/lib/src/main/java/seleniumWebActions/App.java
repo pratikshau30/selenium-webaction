@@ -3,7 +3,6 @@ package seleniumWebActions;
 import java.net.MalformedURLException;
 
 import seleniumWebActions.browserInit.BrowserInit;
-import seleniumWebActions.exceptions.BrowserException;
 import seleniumWebActions.exceptions.WebDriverException;
 import seleniumWebActions.exceptions.WebElementException;
 import seleniumWebActions.locatorMethods.CountNoOfProducts;
