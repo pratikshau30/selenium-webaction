@@ -88,32 +88,31 @@ public class NavigationCommands {
 		driver.close();
 	}
 
-	public static void main(String[] args) throws MalformedURLException {
-		// TODO: Create the object of NavigationCommands class
-		NavigationCommands navigationCommands = new NavigationCommands();
+	public void run() throws MalformedURLException {
+		
 
 		// TODO: Call the method startBrowser
-		navigationCommands.startBrowser();
+		this.startBrowser();
 
 		// TODO: Call the method openURL to open
 		// https://crio-qkart-frontend-qa.vercel.app/
-		navigationCommands.openURL("https://crio-qkart-frontend-qa.vercel.app/");
+		this.openURL("https://crio-qkart-frontend-qa.vercel.app/");
 
 		// TODO: Call the method navigateToUrl to navigate to
 		// https://crio-qkart-frontend-qa.vercel.app/login
-		navigationCommands.navigateToUrl("https://crio-qkart-frontend-qa.vercel.app/login");
+		this.navigateToUrl("https://crio-qkart-frontend-qa.vercel.app/login");
 
 		// TODO: Call the method backToPreviousUrl
-		navigationCommands.backToPreviousUrl();
+		this.backToPreviousUrl();
 
 		// TODO: Call the method goToNextUrl
-		navigationCommands.goToNextUrl();
+		this.goToNextUrl();
 
 		// TODO: Call the method refreshPage
-		navigationCommands.refreshPage();
+		this.refreshPage();
 
 		// TODO: Call the methods closeBrowser
-		navigationCommands.closeBrowser();
+		this.closeBrowser();
 
 	}
 }
