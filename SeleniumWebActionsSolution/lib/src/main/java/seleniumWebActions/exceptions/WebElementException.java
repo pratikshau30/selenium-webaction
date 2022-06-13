@@ -59,21 +59,20 @@ public class WebElementException {
 		driver.close();
 	}
 	
-	public static void main(String[] args) throws MalformedURLException {
-		// Create the object of WebElementException class
-		WebElementException webElementException = new WebElementException();
+	public void run() throws MalformedURLException {
+		
 
 		//Call the method startBrowser
-		webElementException.startBrowser();
+		this.startBrowser();
 		
 		//Call the method openURL
-		webElementException.openURL("https://crio-qkart-frontend-qa.vercel.app/");
+		this.openURL("https://crio-qkart-frontend-qa.vercel.app/");
 		
 		//Call the method locateLoginBtn 
-		webElementException.locateLoginBtn();
+		this.locateLoginBtn();
 		
 		//Call the method closeBrowser
-		webElementException.closeBrowser();
+		this.closeBrowser();
 
 	}
 }
