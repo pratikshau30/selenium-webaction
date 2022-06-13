@@ -56,8 +56,8 @@ public class FindLocatorsUsingFindElementBy {
 		driver.close();
 	}
 
-	public static void main(String[] args) throws MalformedURLException {
-		// TODO: Create the object of FindLocatorsUsingFindElementBy class
+	public void run() throws MalformedURLException {
+	
 
 		// TODO: Call the method startBrowser
 		
