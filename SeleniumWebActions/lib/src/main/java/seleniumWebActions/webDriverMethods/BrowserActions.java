@@ -80,9 +80,8 @@ public class BrowserActions {
 
 	}
 
-	public static void main(String[] args) throws MalformedURLException {
-		// TODO : Create the object of BrowserActions class
-
+	public void run() throws MalformedURLException {
+		
 		// TODO : Call the method startBrowser
 
 		// TODO : Call the method openURL to open https://crio-qkart-frontend-qa.vercel.app/
