@@ -18,10 +18,8 @@ public class BrowserInit {
 	
 	}
 
-	public static void main(String[] args) throws MalformedURLException {
-		BrowserInit browserInit = new BrowserInit();
-
-		browserInit.startBrowser();
+	public void run() throws MalformedURLException {
+		this.startBrowser();
 	}
 
 }
