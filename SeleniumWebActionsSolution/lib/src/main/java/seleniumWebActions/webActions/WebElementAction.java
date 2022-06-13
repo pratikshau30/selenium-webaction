@@ -100,34 +100,33 @@ public class WebElementAction {
 		driver.close();
 	}
 
-	public static void main(String[] args) throws MalformedURLException {
-		// TODO: Create the object of WebElementAction class
-		WebElementAction webElementAction = new WebElementAction();
+	public void run() throws MalformedURLException {
+		
 
 		// TODO: Call the method startBrowser
-		webElementAction.startBrowser();
+		this.startBrowser();
 
 		// TODO: Call the method openURL
-		webElementAction.openURL("https://crio-qkart-frontend-qa.vercel.app/");
+		this.openURL("https://crio-qkart-frontend-qa.vercel.app/");
 
 		// TODO: Call the method getLoginBtnText
-		String text = webElementAction.getLoginBtnText();
+		String text = this.getLoginBtnText();
 		System.out.println("Title of login button is : " + text);
 
 		// TODO: Call the method clickOnLoginBtn
-		webElementAction.clickOnLoginBtn();
+		this.clickOnLoginBtn();
 
 		// TODO: Call the method enterUserName
-		webElementAction.enterUserName("admin");
+		this.enterUserName("admin");
 
 		// TODO: Call the method enterPassWord
-		webElementAction.enterPassWord("admin");
+		this.enterPassWord("admin");
 
 		// TODO: Call the method clickOnLoginToQKart
-		webElementAction.clickOnLoginToQKart();
+		this.clickOnLoginToQKart();
 
 		// TODO: Call the method closeBrowser
-		webElementAction.closeBrowser();
+		this.closeBrowser();
 
 	}
 }
