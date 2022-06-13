@@ -81,10 +81,7 @@ public class NavigationCommands {
 		driver.close();
 	}
 	
-	public static void main(String[] args) throws MalformedURLException {
-		// TODO: Create the object of NavigationCommands class
-		
-		// TODO: Call the method startBrowser
+	public  void run() throws MalformedURLException {
 		
 		// TODO: Call the method openURL to open
 		// https://crio-qkart-frontend-qa.vercel.app/
