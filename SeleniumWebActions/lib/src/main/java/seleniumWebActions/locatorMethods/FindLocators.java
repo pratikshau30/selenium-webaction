@@ -53,8 +53,8 @@ public class FindLocators {
 		driver.close();
 	}
 
-	public static void main(String[] args) throws MalformedURLException {
-		// TODO: Create the object of FindLocators class
+	public void run() throws MalformedURLException {
+
 
 		// TODO: Call the method startBrowser
 		
