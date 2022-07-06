@@ -23,7 +23,7 @@
             "name": "Debug (Launch)-App<lib>",
             "request": "launch",
             "mainClass": "seleniumWebActions.App",
-            "projectName": "SeleniumWebActions-lib",
+            "projectName": "lib",
             "preLaunchTask": "selenium-start"
         }
     ]
